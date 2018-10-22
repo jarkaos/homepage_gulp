@@ -17,7 +17,7 @@ var env,
 	outputDir,
     sassStyle;
 
-env = process.env.NODE_ENV || 'production';
+env = process.env.NODE_ENV || 'development';
 
 if(env === 'development') {
     outputDir = 'builds/development/';
@@ -28,10 +28,12 @@ if(env === 'development') {
 }
 
 jsSources = [
-	'components/js/*.js'
+	'components/js/jquery.js',
+	'components/js/bootstrap.min.js',
+	'components/js/script.js'
 ];
 
-sassSources = ['components/sass/*.scss'];
+sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 
 gulp.task('js', function() {

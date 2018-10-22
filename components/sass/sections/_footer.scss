@@ -1,0 +1,67 @@
+footer {
+    color: $white;
+    @include cover-background('../img/map2.jpg');
+    
+    .icon {
+        font-size: 36px;
+        background: $green;
+        border-radius: 50%;
+        padding: 18px;
+        display: block;
+    }
+    
+    .media {
+	    &:first-child { margin-top: 0; }
+	    margin-top: 50px !important;
+	    opacity: 0;
+	    @include transition(all 0.5s ease-in-out);
+	    &.fade-in {
+			opacity: 1;    
+	    }
+    }
+    
+    .media-body {
+        vertical-align: middle;
+        h4 {
+            text-indent: 0px;
+            font-style: normal;
+        }
+    } // end media-body
+    
+    form {
+        margin-top: 20px;    
+    }
+    
+    .form-group {
+        input {
+            background: rgba(0, 0, 0, 0.5);
+            height: 60px;
+            font-size: 20px;
+        }  
+    }
+    
+    textarea {
+        background: rgba(0, 0, 0, 0.5) !important;
+    }  
+    
+    .btn {
+        color: $white;
+        font-size: 1em;
+        letter-spacing: 0.1rem;
+        margin-top: 10px;
+    }
+    
+    section {
+        margin-bottom: 0;
+        padding-bottom: 40px;
+    }
+}
+
+@media(min-width: 970px) {
+    footer {
+        form {
+            margin-top: 0px;
+        }    
+    }
+    
+}

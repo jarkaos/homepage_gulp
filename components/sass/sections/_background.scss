@@ -1,0 +1,66 @@
+/**************
+BACKGROUND SECTION
+**************/
+
+#background {
+    padding-bottom: 0px;
+    .divider { border-top: 1px solid $darker-gray; }
+    .work {
+        margin-bottom: 50px;
+        padding-bottom: 20px;
+    }
+    .studies {
+        background: #f5f5f5;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .info {
+        .start-year,
+        .end-year { font-weight: 700; }
+
+        .end-year,
+        .place-name { color: $green; }
+        
+        .date {
+            &::before {
+                content: '';
+                @include position(absolute, null, 0px, 0, null);
+                width: 70%;
+                height: 1px;
+                background: $darker-gray; 
+            }
+        }
+    } // end info
+    
+    
+    .description {
+        padding-top: 20px;
+        padding-left: 20px;
+        h5 { font-weight: 600; }
+        p { display: block; }
+    } // end description
+    
+    @media(min-width: 970px) {
+        .info {
+            .end-year::before {
+                content: '';
+                @include position(absolute, 55px, null, null, 0px);
+                width: 15%;
+                height: 5px;
+                background: #000000; 
+            }
+        } // end info
+        
+        .description {
+            padding-top: 0;
+            &::before {
+                content: '';
+                @include position(absolute, 0, 100%, null, null);
+                width: 1px;
+                height: 100%;
+                background: $darker-gray;
+            }
+        }
+    } // end min-width: 970px
+} // end background

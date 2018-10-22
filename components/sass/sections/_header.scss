@@ -1,0 +1,56 @@
+/**************
+HEADER SECTION
+**************/
+
+header {
+	position: relative;
+	overflow: hidden;
+	.video-bg,
+	.video-overlay {
+		@include position(absolute, 0,0,0,0);
+		display: block;
+	}
+	.video-overlay { 
+		background: rgba(0, 0, 0, 0.5);
+		pointer-events: none;
+	}
+	.video-bg {
+		background: url('../media/screenshot.jpg') center center no-repeat;
+		background-size: cover;
+		video {
+			min-height: 100%;
+			min-width: 100%;
+			width: auto;
+			height: auto;
+			@include position(absolute, 50%, null, null, 50%);
+			transform: translate(-50%, -50%);
+		} // end video
+	} // end video-bg
+	.fade-in-video {
+		opacity: 0;
+		transition: opacity .8s linear;
+		&.is-playing {
+			opacity: 1;
+		}
+	}	
+	.callout-inner {
+		position: relative;
+		text-align: center;
+		margin: 5% 0;
+		color: #fff;
+		text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5% 0;
+		h1 {
+			font-size: 10rem;
+		}
+	}
+	.icon-circle-down {
+		font-size: 9rem;
+		color: #1abc9c;
+		margin-top: 10%;
+		display: block;
+	}
+}

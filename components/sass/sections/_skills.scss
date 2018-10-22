@@ -1,0 +1,84 @@
+/**************
+ABOUT SECTION
+**************/
+
+#skills {
+	color: $white;
+    @include cover-background('../img/stockholm2.jpg');
+    
+    .bar {
+        height: 150px;
+        width: 50px;
+        margin: 0 auto;
+        position: relative;
+        .level {
+            height: 0%;
+            width: 50px;
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            @include transition(all 0.4s ease-in-out);
+            
+            &.html5.start {
+                @include start-chart-animation(100%, #1abc9c, 1);
+                @include animation('html5 1s ease-out forwards');
+            }
+            
+            &.javascript.start {
+                @include start-chart-animation(70%, #1abc9c, 1);
+                @include animation('javascript 1s ease-out forwards');
+            }
+            
+            &.less.start {
+                @include start-chart-animation(85%, #1abc9c, 1);
+                @include animation('less 1s ease-out forwards');
+            }
+            
+            &.photoshop.start {
+                @include start-chart-animation(80%, #1abc9c, 1);
+                @include animation('photoshop 1s ease-out forwards');
+            }
+            
+            &.wordpress.start {
+                @include start-chart-animation(70%, #1abc9c, 1);
+                @include animation('wordpress 1s ease-out forwards');
+            }
+            
+            &.sharepoint.start {
+                @include start-chart-animation(70%, #1abc9c, 1);
+                @include animation('sharepoint 1s ease-out forwards');
+            }
+        } // end level
+    } // end bar
+    
+    @-moz-keyframes html5      { 0% { height: 0px; } 100% { height: 95%; }}
+    @-webkit-keyframes html5   { 0% { height: 0px; } 100% { height: 95%; }}
+    @keyframes html5           { 0% { height: 0px; } 100% { height: 95%; }}
+    
+    @-moz-keyframes javascript      { 0% { height: 0px; } 100% { height: 75%; }}
+    @-webkit-keyframes javascript   { 0% { height: 0px; } 100% { height: 75%; }}
+    @keyframes javascript           { 0% { height: 0px; } 100% { height: 75%; }}
+    
+    @-moz-keyframes less      { 0% { height: 0px; } 100% { height: 85%; }}
+    @-webkit-keyframes less   { 0% { height: 0px; } 100% { height: 85%; }}
+    @keyframes less           { 0% { height: 0px; } 100% { height: 85%; }}
+    
+    @-moz-keyframes photoshop      { 0% { height: 0px; } 100% { height: 70%; }}
+    @-webkit-keyframes photoshop   { 0% { height: 0px; } 100% { height: 70%; }}
+    @keyframes photoshop           { 0% { height: 0px; } 100% { height: 70%; }}
+    
+    @-moz-keyframes wordpress      { 0% { height: 0px; } 100% { height: 70%; }}
+    @-webkit-keyframes wordpress   { 0% { height: 0px; } 100% { height: 70%; }}
+    @keyframes wordpress           { 0% { height: 0px; } 100% { height: 70%; }}
+    
+    @-moz-keyframes sharepoint      { 0% { height: 0px; } 100% { height: 90%; }}
+    @-webkit-keyframes sharepoint   { 0% { height: 0px; } 100% { height: 90%; }}
+    @keyframes sharepoint           { 0% { height: 0px; } 100% { height: 90%; }}
+}
+
+@media(min-width: 970px) {
+    #skills {
+        .bar { height: 300px; }
+    }
+}
+

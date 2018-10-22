@@ -1,0 +1,28 @@
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin cover-background($image) {
+    background-image: url($image);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin start-chart-animation($height, $color, $opacity) {
+    height: $height;
+    background-color: $color;
+    opacity: $opacity;
+}
