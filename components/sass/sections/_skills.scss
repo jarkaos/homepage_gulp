@@ -5,7 +5,18 @@ ABOUT SECTION
 #skills {
 	color: $white;
     @include cover-background('../img/stockholm2.jpg');
-    
+    p {
+        color: $white;
+      strong {
+        color: $green;
+      }
+    }
+    .bar-container {
+      h5 {
+        font-weight: 600;
+        letter-spacing: 1.2px;
+      }
+    }
     .bar {
         height: 150px;
         width: 50px;
@@ -18,32 +29,32 @@ ABOUT SECTION
             bottom: 0;
             opacity: 0;
             @include transition(all 0.4s ease-in-out);
-            
+
             &.html5.start {
                 @include start-chart-animation(100%, #1abc9c, 1);
                 @include animation('html5 1s ease-out forwards');
             }
-            
+
             &.javascript.start {
                 @include start-chart-animation(70%, #1abc9c, 1);
                 @include animation('javascript 1s ease-out forwards');
             }
-            
+
             &.less.start {
                 @include start-chart-animation(85%, #1abc9c, 1);
                 @include animation('less 1s ease-out forwards');
             }
-            
+
             &.photoshop.start {
                 @include start-chart-animation(80%, #1abc9c, 1);
                 @include animation('photoshop 1s ease-out forwards');
             }
-            
+
             &.wordpress.start {
                 @include start-chart-animation(70%, #1abc9c, 1);
                 @include animation('wordpress 1s ease-out forwards');
             }
-            
+
             &.sharepoint.start {
                 @include start-chart-animation(70%, #1abc9c, 1);
                 @include animation('sharepoint 1s ease-out forwards');

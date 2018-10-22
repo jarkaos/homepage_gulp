@@ -1,7 +1,12 @@
 footer {
     color: $white;
     @include cover-background('../img/map2.jpg');
-    
+    p {
+        color: $white;
+        strong {
+            color: $green;
+        }
+    }
     .icon {
         font-size: 36px;
         background: $green;

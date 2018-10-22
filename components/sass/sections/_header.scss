@@ -11,7 +11,7 @@ header {
 		display: block;
 	}
 	.video-overlay { 
-		background: rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.7);
 		pointer-events: none;
 	}
 	.video-bg {
@@ -44,7 +44,13 @@ header {
 		justify-content: center;
 		padding: 5% 0;
 		h1 {
-			font-size: 10rem;
+			font-size: 5.157em;
+          margin-top: 0;
+		}
+		h2 {
+          font-weight: 300;
+          color: #ffffff;
+          font-style: normal;
 		}
 	}
 	.icon-circle-down {
